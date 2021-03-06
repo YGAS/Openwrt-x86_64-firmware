@@ -104,7 +104,7 @@ jobs:
       run: |
         cd openwrt
         make package/linkease/compile V=s
-     
+        echo "::set-output name=status::success"
 
 #     - name: Compile the firmware
 #       id: compile
