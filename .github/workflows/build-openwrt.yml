@@ -102,6 +102,7 @@ jobs:
     - name: Compile linkease
       id: compile
       run: |
+        make defconfig
         cd openwrt
         make package/linkease/compile V=s
      
