@@ -17,7 +17,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: true
-        default: 'false'
+        default: 'true'
 
 env:
   REPO_URL: https://github.com/YGAS/openwrt-sdk-bcm27xx-bcm2711.git
@@ -103,7 +103,8 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        make package/linkease/compile V=s
+        make package/linkease-openwrt/linkease/compile V=s
+        make package/linkease-openwrt/luci-app-linkease/compile V=s
         echo "::set-output name=status::success"
 
 #     - name: Compile the firmware
