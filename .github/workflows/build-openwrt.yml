@@ -104,7 +104,6 @@ jobs:
       run: |
         cd openwrt
         make package/linkease-openwrt/linkease/compile V=s
-        make package/linkease-openwrt/luci-app-linkease/compile V=s
         echo "::set-output name=status::success"
 
 #     - name: Compile the firmware
