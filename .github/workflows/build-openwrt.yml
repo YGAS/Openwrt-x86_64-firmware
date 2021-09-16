@@ -103,9 +103,11 @@ jobs:
       id: compile
       run: |
         cd openwrt
-        make package/luci-app-jellyfin/compile V=s
-        make package/luci-app-homeassistant/compile V=s
+        make package/luci-app-nextcloud/compile V=s
         echo "::set-output name=status::success"
+#        make package/luci-app-jellyfin/compile V=s
+#        make package/luci-app-homeassistant/compile V=s
+#        echo "::set-output name=status::success"
 
 #     - name: Compile the firmware
 #       id: compile
